@@ -1,4 +1,4 @@
-# Post Mutations
+# System Mutations
 
 [![Build Status][ico-travis]][link-travis]
 [![Quality Score][ico-code-quality]][link-code-quality]
@@ -10,7 +10,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 -->
 
-Adds support for system-mutations
+Adds support for system mutations
 
 ## Install
 
