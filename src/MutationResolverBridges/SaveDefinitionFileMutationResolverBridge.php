@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace PoPSitesWassup\SystemMutations\MutationResolverBridges;
 
-use Symfony\Contracts\Service\Attribute\Required;
 use PoP\ComponentModel\MutationResolvers\MutationResolverInterface;
 use PoPSitesWassup\SystemMutations\MutationResolvers\SaveDefinitionFileMutationResolver;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class SaveDefinitionFileMutationResolverBridge extends AbstractSystemComponentMutationResolverBridge
 {
     protected SaveDefinitionFileMutationResolver $saveDefinitionFileMutationResolver;
 
     #[Required]
-    public function autowireSaveDefinitionFileMutationResolverBridge(
+    final public function autowireSaveDefinitionFileMutationResolverBridge(
         SaveDefinitionFileMutationResolver $saveDefinitionFileMutationResolver,
     ): void {
         $this->saveDefinitionFileMutationResolver = $saveDefinitionFileMutationResolver;

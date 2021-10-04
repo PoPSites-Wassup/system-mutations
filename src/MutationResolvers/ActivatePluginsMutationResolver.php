@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PoPSitesWassup\SystemMutations\MutationResolvers;
 
-use Symfony\Contracts\Service\Attribute\Required;
 use PoP\ComponentModel\Info\ApplicationInfoInterface;
 use PoP\ComponentModel\MutationResolvers\AbstractMutationResolver;
 use PoP\Engine\CMS\CMSServiceInterface;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class ActivatePluginsMutationResolver extends AbstractMutationResolver
 {
@@ -15,7 +15,7 @@ class ActivatePluginsMutationResolver extends AbstractMutationResolver
     protected ApplicationInfoInterface $applicationInfo;
 
     #[Required]
-    public function autowireActivatePluginsMutationResolver(
+    final public function autowireActivatePluginsMutationResolver(
         CMSServiceInterface $cmsService,
         ApplicationInfoInterface $applicationInfo,
     ): void {

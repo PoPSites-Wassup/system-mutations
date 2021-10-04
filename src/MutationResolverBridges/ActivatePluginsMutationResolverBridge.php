@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace PoPSitesWassup\SystemMutations\MutationResolverBridges;
 
-use Symfony\Contracts\Service\Attribute\Required;
 use PoP\ComponentModel\MutationResolvers\MutationResolverInterface;
 use PoPSitesWassup\SystemMutations\MutationResolvers\ActivatePluginsMutationResolver;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class ActivatePluginsMutationResolverBridge extends AbstractSystemComponentMutationResolverBridge
 {
     protected ActivatePluginsMutationResolver $activatePluginsMutationResolver;
 
     #[Required]
-    public function autowireActivatePluginsMutationResolverBridge(
+    final public function autowireActivatePluginsMutationResolverBridge(
         ActivatePluginsMutationResolver $activatePluginsMutationResolver,
     ): void {
         $this->activatePluginsMutationResolver = $activatePluginsMutationResolver;
